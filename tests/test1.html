@@ -2,13 +2,14 @@
 <html>
 <head>
 	<title>Test1</title>
-
+	<style type="text/css">canvas{background-color: black;}</style>
 </head>
 <body>
 <canvas id ="test"></canvas>
 <script type="text/javascript" src="../lib/assetManager.js"></script>
 <script type="text/javascript" src="../lib/engine.js"></script>
 <script type="text/javascript" src="../lib/scene.js"></script>
+<script type="text/javascript" src="../lib/extendContext.js"></script>
 <script type="text/javascript">
 	var game = new Engine('test', 800, 600);
 
@@ -21,7 +22,9 @@
 	}
 
 	game.render = function ( context ){
-		context.drawImage();
+		//(x, y, width, height, border, color){
+		context.drawRec(99, 449, 601, 52, 2, 'black');
+
 	}
 
 	game.play();
