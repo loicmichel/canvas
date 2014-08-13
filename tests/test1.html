@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Test1</title>
+
+</head>
+<body>
+<canvas id ="test"></canvas>
+<script type="text/javascript" src="../lib/assetManager.js"></script>
+<script type="text/javascript" src="../lib/engine.js"></script>
+<script type="text/javascript" src="../lib/scene.js"></script>
+<script type="text/javascript">
+	var game = new Engine('test', 800, 600);
+
+	game.init = function ( ASSET_MANAGER ){
+		ASSET_MANAGER.queueDownload('test.png');
+	}
+
+	game.update = function(){
+		
+	}
+
+	game.render = function ( context ){
+		context.drawImage();
+	}
+
+	game.play();
+</script>
+</body>
+</html>
